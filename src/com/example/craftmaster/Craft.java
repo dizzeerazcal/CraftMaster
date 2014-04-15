@@ -1,14 +1,13 @@
 package com.example.craftmaster;
 
 public class Craft {
-	
+
 	private int index;
 	private String text;
-	
-	public Craft(int index, String text){
+
+	public Craft(int index, String text) {
 		this.index = index;
 		this.text = text;
-		
 	}
 
 	public int getIndex() {
@@ -26,7 +25,5 @@ public class Craft {
 	public void setText(String text) {
 		this.text = text;
 	}
-	
-	
 
 }

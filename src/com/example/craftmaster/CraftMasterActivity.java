@@ -1,17 +1,26 @@
 package com.example.craftmaster;
 
+import java.util.List;
+
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class CraftMasterActivity extends ActionBarActivity {
+public class CraftMasterActivity extends ListActivity {
+
+	private CraftAdapter craftAdapter;
+	private List<Craft> crafts;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.craft_master);
 
+		crafts = CraftGenerator.generateCrafts();
+		craftAdapter = new CraftAdapter(this, R.layout.craft_item, crafts);
+
+		setListAdapter(craftAdapter);
 	}
 
 	@Override
