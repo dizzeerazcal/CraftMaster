@@ -6,6 +6,9 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
 
 public class CraftMasterActivity extends ListActivity {
 
@@ -21,6 +24,17 @@ public class CraftMasterActivity extends ListActivity {
 		craftAdapter = new CraftAdapter(this, R.layout.craft_item, crafts);
 
 		setListAdapter(craftAdapter);
+	}
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+
+		String message = getString(R.string.lipsum_message, crafts
+				.get(position).getText());
+
+		Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+		super.onListItemClick(l, v, position, id);
 	}
 
 	@Override

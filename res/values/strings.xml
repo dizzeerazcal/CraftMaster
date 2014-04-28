@@ -4,5 +4,6 @@
     <string name="app_name">Craft Master</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="lipsum_message">Lorem Ipsum\n%s</string>
 
 </resources>

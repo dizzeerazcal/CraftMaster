@@ -1,5 +1,5 @@
-CraftMaster
-===========
+CraftMaster v0.1
+================
 
 Android App for Displaying Crafts in compliance to DIN 276
 
